@@ -6,15 +6,15 @@
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
 //Constantes
-    const int TamanhoDoTabuleiro = 10;
-    const int TamanhoDoNavio = 3;
+    #define TamanhoDoTabuleiro 10;
+    #define TamanhoDoNavio 3;
     const int agua = 0;
     const int navio = 3;
     const int verdadeiro = 1;
     const int falso = 0;
 
 //Inicio do Tabuleiro
-    void inciodoTabuleiro(int tabuleiro[10][10]){
+    void inciodoTabuleiro(int tabuleiro[TamanhoDoTabuleiro][TamanhoDoTabuleiro]){
         for (int i = 0; i < TamanhoDoTabuleiro; i++){
             for (int j = 0; j < TamanhoDoTabuleiro; j++){
                 tabuleiro[i][j] = agua;
@@ -23,7 +23,7 @@
     }
 
 //Validação da posição do navio
-    int validarPosisao(int tabuleiro[10][10],
+    int validarPosisao(int tabuleiro[TamanhoDoTabuleiro][TamanhoDoTabuleiro],
                         int linhaInicial,
                         int colunaInicial,
                         char orientacao) {
@@ -52,7 +52,7 @@
     }
 
 //Marcando a posição do navio.
-    void posionarNavio(int tabuleiro[10][10],
+    void posionarNavio(int tabuleiro[TamanhoDoTabuleiro][TamanhoDoTabuleiro],
                         int linhaInicial,
                         int colunaInicial,
                         char orientacao,
@@ -71,7 +71,7 @@
     }
 
 //Exibir Tabuleiro
-    void ExibirTabuleiro(int tabuleiro[10][10]){
+    void ExibirTabuleiro(int tabuleiro[TamanhoDoTabuleiro][TamanhoDoTabuleiro]){
         printf("\n##### Tabuleiro de Batalha Naval ####\n");
         printf("   ");
         for (int j = 0; j < TamanhoDoTabuleiro; j++){
